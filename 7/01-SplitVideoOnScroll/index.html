@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
+	<title>Split Video on Page Scroll</title>
+</head>
+<body>
+	<section>
+		<div class="side" id="side1">
+			<video src="bg.mp4" type="video/mp4" autoplay loop muted></video>
+		</div>
+		<div class="side" id="side2">
+			<video src="bg.mp4" type="video/mp4" autoplay loop muted></video>
+		</div>
+	</section>
+	<div class="content">
+		<h2>Split Video on Page Scroll</h2>
+		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda dolorem dolorum et blanditiis iure dicta fuga repellat? Minus explicabo, perspiciatis id cum sapiente earum possimus? Vel inventore, eos officia consectetur eum quasi aperiam velit ipsam quos laboriosam sint illo libero tempora culpa! Ratione error aliquam nihil illo! Sint saepe quisquam quam repellat fugit veritatis eveniet amet aut neque? Itaque, at delectus. Eveniet at corporis distinctio, voluptatum minima modi dicta deleniti est recusandae, expedita nisi necessitatibus maxime voluptatibus veniam! Unde esse exercitationem eveniet libero asperiores perferendis sed deleniti ipsa illum eaque consequuntur illo, aperiam quibusdam recusandae doloribus doloremque officia. Modi, fuga eum tenetur neque ab, ipsum omnis optio numquam expedita exercitationem quis est? Neque laborum dolores minima porro voluptatem eaque quia aliquid perspiciatis soluta nostrum, debitis praesentium reiciendis, quam minus ullam. Impedit, suscipit consectetur doloribus officiis vero quos magni, officia sequi illum tenetur adipisci? Eum cumque excepturi, vero adipisci quo modi?</p>
+	</div>
+
+	<script>
+		let side1 = document.getElementById('side1');
+		let side2 = document.getElementById('side2');
+
+		window.addEventListener('scroll', function(){
+			side1.style.left = -window.pageYOffset+'px';
+			side2.style.left = window.pageYOffset+'px';
+		})
+	</script>
+</body>
+</html>
