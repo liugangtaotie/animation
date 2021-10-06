@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+*
+{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+}
+body
+{
+	height: 200vh;
+	background: #323232;
+}
+.bg
+{
+	position: relative;
+	width: 100%;
+	height: 100vh;
+    background: #2bbaff;
+	overflow: hidden;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.bg .skewedOne
+{
+	position: absolute;
+	bottom: -100%;
+	left: 50%;
+	height: 100%;
+	width: 100%;
+	background: #323232;
+	transform: skewY(-15deg);
+	transform-origin: top left;
+}
+.bg .skewedTwo
+{
+	position: absolute;
+	bottom: -100%;
+	right: 50%;
+	height: 100%;
+	width: 100%;
+	background: #323232;
+	transform: skewY(15deg);
+	transform-origin: top right;
+}
+.bg h2
+{
+	position: relative;
+	color: #fff;
+	font-size: 5em;
+}
+section
+{
+	padding: 100px;
+}
+section h2
+{
+	color: #fff;
+	font-size: 2em;
+	margin-bottom: 10px;
+}
+section p
+{
+	color: #fff;
+	font-size: 1.2em;
+}

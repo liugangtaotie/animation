@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap');
+*
+{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Roboto', sans-serif;
+}
+section
+{
+	position: relative;
+	overflow: hidden;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+    background: #0e1623;
+    overflow: hidden;
+}
+.text
+{	
+	font-size: 5em;
+	width: 100%;
+	text-align: center;
+	-webkit-box-reflect: below -0.46em linear-gradient(transparent,#0004);
+}
+span
+{	
+	color: #00fe77;
+	position: relative;
+	display: inline-block;
+}

@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Flying Text Animation Effects | Anime.JS</title>
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+		<section>
+			<p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		</section>
+		<script src="anime.min.js"></script>
+		<script>
+			// now, split text into words
+			const text = document.querySelector('.text');
+			text.innerHTML = text.textContent.replace(/\S/g, "<span>$&</span>");
+
+			var animation = anime.timeline({
+						targets : 'span',
+			      easing: 'easeInOutExpo',
+			      loop: true,
+		  });
+			animation
+		      .add({
+						targets : 'span',
+		      	rotate:  function() { return anime.random(-360,360);},
+		        translateX: function() {
+			      return anime.random(-500, 500);
+			    	},
+		        translateY: function() {
+			      return anime.random(-500, 500);
+			    	},
+			    	duration: 5000,
+					delay: anime.stagger(20),
+		      })
+		      .add({
+		        rotate: 0,
+		        translateX: 0,
+		        translateY: 0,
+		    	duration: 5000,
+				delay: anime.stagger(20),
+		      })
+		</script>
+	</body>
+</html>
+
+
