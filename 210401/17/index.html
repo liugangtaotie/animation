@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Play Paused Video Toggle using Javascript</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div class="container">
+		<div class="box">
+			<video src="clip1.mp4" muted="muted" loop></video>
+		</div>
+		<div class="box">
+			<video src="clip2.mp4" muted="muted" loop></video>
+		</div>
+		<div class="box">
+			<video src="clip3.mp4" muted="muted" loop></video>
+		</div>
+		<div class="box">
+			<video src="clip4.mp4" muted="muted" loop></video>
+		</div>
+	</div>
+	<script type="text/javascript">
+		 const clip = document.querySelectorAll('video')
+		 for (let i = 0; i < clip.length; i++) {
+		   clip[i].addEventListener( 'mouseenter', function(e) { 
+		     clip[i].play()
+		   })
+		   clip[i].addEventListener( 'mouseout', function(e) {
+		     clip[i].pause()
+		   })
+		 }
+	</script>
+</body>
+</html>
