@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Circle Text Mousemove Effects | Splitting.js</title>
+		<link rel="stylesheet" href="splitting.css">
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+		<div class="circle"  data-splitting>
+			Circle-text-mousemove-effects-
+		</div>
+		<script src="splitting.js"></script>
+		<script> Splitting(); </script>
+		<script type="text/javascript">
+			let circle = document.querySelector('.circle');
+			window.onmousemove = function(e){
+				let x = e.clientX/-2;
+				circle.style.transform = "perspective(1000px) rotateY(" + x + "deg) rotateX(20deg)";
+			}
+		</script>
+	</body>
+</html>
